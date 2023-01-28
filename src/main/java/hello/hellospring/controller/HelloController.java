@@ -22,7 +22,7 @@ public class HelloController {
         return "hello-tmplate";
     }
 
-    @GetMapping("hello-Stirng")
+    @GetMapping("hello-String")
     @ResponseBody
     public  String helloString(@RequestParam("name") String name) {
         return  "hello " + name; // "hello Spring
