@@ -39,12 +39,12 @@ public class HelloController {
     static class Hello {
         private String name;
 
-        public  String getName() {
+        public String getName() {
             return name;
         }
 
-        public  String setName(String name) {
-            return name;
+        public void setName(String name) {
+            this.name = name;
         }
     }
 }
