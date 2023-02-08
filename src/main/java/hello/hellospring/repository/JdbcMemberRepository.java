@@ -109,11 +109,6 @@ public class JdbcMemberRepository implements MemberRepository {
             close(conn, pstmt, rs);
         }
     }
-    @Override
-    public List<Member> findByAll() {
-        return null;
-    }
-
     private Connection getConnection() {
         return DataSourceUtils.getConnection(dataSource);
     }
@@ -144,5 +139,4 @@ public class JdbcMemberRepository implements MemberRepository {
     private void close(Connection conn) throws SQLException {
         DataSourceUtils.releaseConnection(conn, dataSource);
     }
-
 }
