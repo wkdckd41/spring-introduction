@@ -61,7 +61,7 @@ public class JdbcMemberRepository implements MemberRepository {
             close(conn, pstmt, rs);
         }
     }
-    @Override
+
     public List<Member> findAll() {
         String sql = "select * from member";
         Connection conn = null;
@@ -109,6 +109,12 @@ public class JdbcMemberRepository implements MemberRepository {
             close(conn, pstmt, rs);
         }
     }
+
+    @Override
+    public List<Member> findByAll() {
+        return null;
+    }
+
     private Connection getConnection() {
         return DataSourceUtils.getConnection(dataSource);
     }
